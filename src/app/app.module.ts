@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './experience/new-experiencia.component';
+import { EditExperienciaComponent } from './experience/edit-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NewExperienciaComponent } from './experience/new-experiencia.component'
     ExperienceComponent,
     LoginComponent,
     NewExperienciaComponent,
+    EditExperienciaComponent,
     ],
   imports: [
     BrowserModule,

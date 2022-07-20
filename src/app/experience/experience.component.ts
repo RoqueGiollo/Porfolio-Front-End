@@ -15,11 +15,7 @@ export class ExperienceComponent implements OnInit {
 
   isLogged = false;
 
-  cargarExperiencia():void{
-    this.sExperiencia.lista().subscribe(data => {this.expe = data})
-  }
-
-  ngOnInit(): void {
+    ngOnInit(): void {
     this.cargarExperiencia();
     if(this.tokenService.getToken()){
       this.isLogged=true;
@@ -27,7 +23,21 @@ export class ExperienceComponent implements OnInit {
       this.isLogged = false;
     }
   }
-
+  cargarExperiencia():void{
+    this.sExperiencia.lista().subscribe(data => {this.expe = data})
+  }
+  delete(id?:number){
+    if(id != undefined){
+      this.sExperiencia.delete(id).subscribe(
+        data => {
+          this.cargarExperiencia();
+          window.alert("experiencia borrada");
+        },err =>{
+          window.alert("Error al borrar");
+        }
+      )
+    }
+  }
   
 }
 
