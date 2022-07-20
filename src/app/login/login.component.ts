@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
         this.roles = data.authorities;
         //this.router.navigate(['about'])
         window.alert("session iniciada")
-        window.location.reload();
-        window.location.replace('/#about')
+        window.location.replace('');
+        
 
       }, err=> {
         this.isLogged=false;

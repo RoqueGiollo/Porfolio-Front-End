@@ -21,7 +21,9 @@ export class HomeComponent implements OnInit {
 
   onLogOut():void{
     this.tokenService.logOut();
-    window.location.reload();
+    window.alert("Sesion cerrada");
+    window.location.replace('');
+    
   }
 
 }

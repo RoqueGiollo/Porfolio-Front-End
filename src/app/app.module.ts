@@ -11,6 +11,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NewExperienciaComponent } from './experience/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     SkillsComponent,
     ExperienceComponent,
     LoginComponent,
+    NewExperienciaComponent,
     ],
   imports: [
     BrowserModule,

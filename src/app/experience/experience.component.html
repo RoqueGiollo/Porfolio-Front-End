@@ -3,8 +3,30 @@
     <section class="resume-section" id="experience">
         <div class="resume-section-content">
             <h2 class="mb-5">Experiencia</h2>
+  
             <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-                <div class="flex-grow-1">
+                
+                <div class = "col-lg-2" >                        <!--routerLink="/nuevaexp"> *ngif="isLogged"-->
+                    <button class="btn btn-primary" type="button" routerLink="/nuevaexp" *ngIf="isLogged" > Nueva Experiencia</button>
+
+                </div>
+              
+                <table class = "table">
+                    <tbody>
+                       <tr *ngFor="let Experiencia of expe">
+                         <td class="subheading mb-3">{{Experiencia.nombreE}}</td>
+                         <td class="subheading mb-1">{{Experiencia.descripcionE}}</td>
+                         <td>editar</td>
+                         <td>borrar</td>
+                       </tr>
+                    </tbody>
+              </table> 
+
+            </div>                   
+        <!-- </section> -->
+</div>
+
+<!--    <div class="flex-grow-1">
                     <h3 class="mb-0">Tecnico y atencion al cliente</h3>
                     <div class="subheading mb-2">Infohazard Informatica</div>
                     <p>Atencion al cliente, reparacion de pc software y hardware</p>
@@ -26,6 +48,4 @@
                     <p>Ventas en diferentes empresas de venta de bienes raices, proyectos propios</p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">Febrero 2016 - Noviembre 2019</span></div>
-            </div>                   
-        <!-- </section> -->
-</div>
+ -->
