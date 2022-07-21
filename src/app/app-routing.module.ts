@@ -7,7 +7,6 @@ import { EditExperienciaComponent } from './experience/edit-experiencia.componen
 import { ExperienceComponent } from './experience/experience.component';
 import { NewExperienciaComponent } from './experience/new-experiencia.component';
 import { HomeComponent } from './home/home.component';
-import { InterestComponent } from './interest/interest.component';
 import { LoginComponent } from './login/login.component';
 import { SkillsComponent } from './skills/skills.component';
 
@@ -18,8 +17,7 @@ const routes: Routes = [
   {path: 'editexp/:id', component:EditExperienciaComponent}, //ruterlink para EDITAR desde component principal-importante el /:id para poder editar dependiendo el id
   {path: 'education', component: EducationComponent},
   {path: 'experience', component: ExperienceComponent},
-  {path: 'interest', component: InterestComponent},
-  {path: 'skills', component: SkillsComponent},
+    {path: 'skills', component: SkillsComponent},
 
 ];
 
