@@ -13,6 +13,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NewExperienciaComponent } from './experience/new-experiencia.component';
 import { EditExperienciaComponent } from './experience/edit-experiencia.component';
+import { NewEducacionComponent } from './education/new-educacion.component';
+import { EditEducacionComponent } from './education/edit-educacion.component';
+import { NewHabilidadComponent } from './skills/new-habilidad.component';
+import { EditHabilidadComponent } from './skills/edit-habilidad.component';
+import { EditAcercaComponent } from './about/edit-acerca.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +31,11 @@ import { EditExperienciaComponent } from './experience/edit-experiencia.componen
     LoginComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewHabilidadComponent,
+    EditHabilidadComponent,
+    EditAcercaComponent
     ],
   imports: [
     BrowserModule,

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Acerca } from '../model/acerca';
+import { SAcercaService } from '../service/s-acerca.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-about',
@@ -6,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+  acer: Acerca[] = [];
 
-//aboutText: string = 
-//"Soy una persona que siempre fue apasionada por la tecnologia y la ciencia, esto me llevo a moverme en el rugbro desde joven. En principio realizaba reparacion de pc y comercializacion de componentes, luego sume redes. En estos momentos estoy estudiando Full Stack jr luego de haber ejercido un tiempo en ventas."
-  constructor() { }
+  constructor(private sAcerca:SAcercaService,private tokenService: TokenService) { }
 
-  ngOnInit(): void {
+  isLogged = false;
+
+    ngOnInit(): void {
+    this.cargarAcerca();
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged = false;
+    }
   }
-  //getVal(value: string){   
-  //  this.aboutText=value 
-  
-  //}
+  cargarAcerca():void{
+    this.sAcerca.lista().subscribe(data => {this.acer = data})
+  }
 }

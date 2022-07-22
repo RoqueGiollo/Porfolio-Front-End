@@ -13,7 +13,35 @@
                 <li class="list-inline-item"><i class="fab fa-npm"></i></li>
             </ul>
             <div class="subheading mb-3">Aptitudes</div>
-            <ul class="fa-ul mb-0">
+
+            <table class = "table">
+                <tbody>
+                    <br>
+                    <br>
+                   <tr *ngFor="let Habilidad of habi">
+                     <td class="subheading mb"><i class="fas fa-check"></i>{{" "+ Habilidad.nombreH}}</td>
+                     <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/edithab/{{Habilidad.id}}" > 
+                        <i class="bi bi-pencil-fill"></i> Editar</button></td>
+                        
+                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Habilidad.id)" >
+                        <i class="bi bi-trash-fill"></i>borrar</button></td>
+                    
+                   </tr>
+                </tbody>
+                
+                <div class = "col-lg-2" >  
+                    <br>
+                    <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
+                    <button class="btn btn-primary" type="button" routerLink="/nuevahab/" *ngIf="isLogged" > Nueva Experiencia</button>
+                </div>
+          </table> 
+
+        </div>
+    </section>
+</div>
+
+<!--
+                <ul class="fa-ul mb-0">
                 <li>
                     <span class="fa-li"><i class="fas fa-check"></i></span>
                     Idioma: Ingles nivel medio
@@ -35,7 +63,5 @@
                     Capacidad de resolucion de problemas
                 </li>
             </ul>
-        </div>
-    </section>
-    
-</div>
+
+-->

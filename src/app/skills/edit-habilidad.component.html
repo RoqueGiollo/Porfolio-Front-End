@@ -1,0 +1,22 @@
+<div class="container-fluid p-0" *ngIf="habi">
+    <hr class="m-0" />
+    <section class="resume-section">   
+        <div class="resume-section-content">
+            <div class="d-flex flex-column flex-bg-row justify-content-between mb-3">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <br>
+                <br>
+                <div class="form-group" >
+                    <label for="nombreE">Ingrese Habilidad</label>
+                    <input type="text" class="form-control"  id="nombreH" name="nombreH" [(ngModel)]="habi.nombreH " required> 
+                </div>
+                <br>
+                <button class = "btn btn-primary">
+                    Actualizar Habilidad
+                </button>
+            </form>
+            </div>
+        </div>
+    </section>    
+    <hr class="m-0" />
+</div>

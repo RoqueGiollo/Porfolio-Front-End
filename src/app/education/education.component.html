@@ -5,6 +5,37 @@
         <div class="resume-section-content">
             <h2 class="mb-5">Educacion</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
+
+                <table class = "table">
+                    <tbody>
+                        <br>
+                        <br>
+                       <tr *ngFor="let Educacion of educ">
+                         <td class="subheading mb">{{Educacion.nombreEd}}</td>
+                         <td >{{Educacion.descripcionEd}}</td>
+                         <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}" > 
+                            <i class="bi bi-pencil-fill"></i> Editar</button></td>
+                            
+                        <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)" >
+                            <i class="bi bi-trash-fill"></i>borrar</button></td>
+                        
+                       </tr>
+                    </tbody>
+                    
+                    <div class = "col-lg-2" >  
+                        <br>
+                        <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
+                        <button class="btn btn-primary" type="button" routerLink="/nuevaedu/" *ngIf="isLogged" > Nueva Experiencia</button>
+                    </div>
+              </table> 
+
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+
+    <!-- 
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Centro de estudios a distancia Cordoba</h3>
                     <div class="subheading mb-2">Secundario</div>
@@ -35,8 +66,4 @@
                     <p>en curso </p>
                 </div>
                 <div class="flex-shrink-0"><span class="text-primary">Octubre 2021 - Agosto 2022</span></div>
-            </div>
-        </div>
-    </section>
-    <hr class="m-0" />
-</div>
+-->
