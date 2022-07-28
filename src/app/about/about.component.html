@@ -1,14 +1,37 @@
 <div class="container-fluid p-0">
             <!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    Roque Maximiliano
-                    <span class="text-primary">Giollo</span>
-                </h1>
+    <section class="resume-section" id="about">
+        <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Roque Maximiliano
+                        <span class="text-primary">Giollo</span>
+                    </h1>
                 <div class="subheading mb-5">
-                    Calle Cordoba 62 · Unquillo · CP 5109 · (3543) 63-2997 ·
-                    <a href="mailto:giolloroque@gmail.com">Contacto</a>
+                        Calle Cordoba 62 · Unquillo · CP 5109 · (3543) 63-2997 ·
+                        <a href="mailto:giolloroque@gmail.com">Contacto</a>
+                            <br>
+                            <br>
+                            
+                    <div>      
+                        <tr *ngFor="let Acerca of acer">
+                            <h2 class="mb-5">Acerca</h2>
+                        <p>{{Acerca.nombreA}}</p>
+                        <br>
+                        <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editace/{{Acerca.id}}" > 
+                            <i class="bi bi-pencil-fill"></i>Editar</button></td>   
+                        <br>
+                        <br>
+                    </div>    
+                </div>
+                <div class="social-icons">
+                <a class="social-icon" href="https://www.linkedin.com/in/roque-giollo/"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/RoqueGiollo"><i class="fab fa-github"></i></a>
+                <a class="social-icon" href="mailto:giolloroque@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+</div>
+
 
                 <!--  
                     <table class = "table">
@@ -22,30 +45,8 @@
                            </tr>
                         </tbody>
                     </table> 
-                -->     
-                        <br>
-                        <br>
-                    <h3 class="mb-5">Acerca</h3>
-                        <div>      
-                        <tr *ngFor="let Acerca of acer">
-                        <p>{{Acerca.nombreA}}</p>
-                        <br>
-                        <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editace/{{Acerca.id}}" > 
-                            <i class="bi bi-pencil-fill"></i>Editar</button></td>   
+                --> 
 
-                        <br>
-                        <br>
-                    </div>    
-                </div>
-                <div class="social-icons">
-                    <a class="social-icon" href="https://www.linkedin.com/in/roque-giollo/"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="https://github.com/RoqueGiollo"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="mailto:giolloroque@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-                </div>
-            </div>
-        </section>
-        <hr class="m-0" />
-</div>
 
 <!-- 
                 </div>

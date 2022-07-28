@@ -19,6 +19,7 @@ export class NewEducacionComponent implements OnInit {
 
   onCreate(): void{
     const educ = new Educacion(this.nombreEd,this.descripcionEd);
+    
     this.sEducacion.save(educ).subscribe(data=>{
       window.alert("Educacion anadida");
       this.router.navigate(['education'])

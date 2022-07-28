@@ -12,6 +12,8 @@ import { ExperienceComponent } from './experience/experience.component';
 import { EditEducacionComponent } from './education/edit-educacion.component';
 import { NewEducacionComponent } from './education/new-educacion.component';
 import { EditAcercaComponent } from './about/edit-acerca.component';
+import { NewHabilidadComponent } from './skills/new-habilidad.component';
+import { EditHabilidadComponent } from './skills/edit-habilidad.component';
 
 const routes: Routes = [
   {path: '', component: AboutComponent},
@@ -23,8 +25,8 @@ const routes: Routes = [
   {path: 'skills', component: SkillsComponent},
   {path: 'editedu/:id', component:EditEducacionComponent},
   {path: 'nuevaedu', component:NewEducacionComponent},
-  {path: 'edithab/:id', component:EditEducacionComponent},
-  {path: 'nuevahab', component:NewEducacionComponent},
+  {path: 'edithab/:id', component:EditHabilidadComponent},
+  {path: 'nuevahab', component:NewHabilidadComponent},
   {path: 'editace/:id', component:EditAcercaComponent} 
 
 

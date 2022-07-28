@@ -1,38 +1,35 @@
 <div class="container-fluid p-0">
-    <hr class="m-0" />
     <!-- Education-->
     <section class="resume-section" id="education">
         <div class="resume-section-content">
-            <h2 class="mb-5">Educacion</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-3">
-
-                <table class = "table">
+                <h2 class="mb-5">Educacion</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
                     <tbody>
                         <br>
                         <br>
-                       <tr *ngFor="let Educacion of educ">
-                         <td class="subheading mb">{{Educacion.nombreEd}}</td>
-                         <td >{{Educacion.descripcionEd}}</td>
-                         <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}" > 
-                            <i class="bi bi-pencil-fill"></i> Editar</button></td>
-                            
-                        <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)" >
-                            <i class="bi bi-trash-fill"></i>borrar</button></td>
-                        
-                       </tr>
+                        <tr *ngFor="let Educacion of educ">
+                            <td class="subheading mb">{{Educacion.nombreEd}}</td>
+                            <td >{{Educacion.descripcionEd}}</td>
+                            <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}" > 
+                                <i class="bi bi-pencil-fill"></i> Editar</button></td>
+                            <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Educacion.id)" >
+                                <i class="bi bi-trash-fill"></i>borrar</button></td>
+                        </tr>
                     </tbody>
-                    
-                    <div class = "col-lg-2" >  
-                        <br>
-                        <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
-                        <button class="btn btn-primary" type="button" routerLink="/nuevaedu/" *ngIf="isLogged" > Nueva Experiencia</button>
-                    </div>
+                        <div>  
+                            <br>
+                            <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
+                            <button class="btn btn-primary" type="button" routerLink="/nuevaedu/" *ngIf="isLogged" > Nueva Educacion</button>
+                            <br>
+                            <br> 
+                        </div>
               </table> 
 
             </div>
         </div>
     </section>
-    <hr class="m-0" />
+</div>
 
 
     <!-- 

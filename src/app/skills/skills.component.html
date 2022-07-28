@@ -2,40 +2,40 @@
     <!-- Skills-->
     <section class="resume-section" id="skills">
         <div class="resume-section-content">
-            <h2 class="mb-5">Habilidades</h2>
-            <div class="subheading mb-3">Lenguajes y Herramientas </div>
-            <ul class="list-inline dev-icons">
-                <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                <li class="list-inline-item"><i class="fab fa-github"></i></li>
-                <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-            </ul>
-            <div class="subheading mb-3">Aptitudes</div>
-
-            <table class = "table">
-                <tbody>
-                    <br>
-                    <br>
-                   <tr *ngFor="let Habilidad of habi">
-                     <td class="subheading mb"><i class="fas fa-check"></i>{{" "+ Habilidad.nombreH}}</td>
-                     <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/edithab/{{Habilidad.id}}" > 
-                        <i class="bi bi-pencil-fill"></i> Editar</button></td>
-                        
-                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Habilidad.id)" >
-                        <i class="bi bi-trash-fill"></i>borrar</button></td>
-                    
-                   </tr>
-                </tbody>
-                
-                <div class = "col-lg-2" >  
-                    <br>
-                    <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
-                    <button class="btn btn-primary" type="button" routerLink="/nuevahab/" *ngIf="isLogged" > Nueva Experiencia</button>
-                </div>
-          </table> 
-
+                    <h2 class="mb-5">Habilidades</h2>
+                <div class="subheading mb-3">Lenguajes y Herramientas </div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fa-brands fa-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-github"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                <div class="subheading mb-3">Aptitudes</div>
+            <div class="table-responsive">       
+                <table class="table table-striped">
+                    <tbody>
+                        <br>
+                        <br>
+                        <tr *ngFor="let Habilidad of habi">
+                            <td class="subheading mb"><i class="fas fa-check"></i> &nbsp; {{" "+ Habilidad.nombreH}}</td>
+                            <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/edithab/{{Habilidad.id}}" > 
+                                <i class="bi bi-pencil-fill"></i> Editar</button></td>
+                            <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Habilidad.id)" >
+                                <i class="bi bi-trash-fill"></i>borrar</button></td>
+                        </tr>
+                    </tbody>
+                        <div>  
+                            <br>
+                            <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
+                            <button class="btn btn-primary" type="button" routerLink="/nuevahab/" *ngIf="isLogged" > Nueva Habilidad</button>
+                            <br>
+                            <br>
+                        </div>
+                </table> 
+            </div> 
         </div>
     </section>
 </div>
