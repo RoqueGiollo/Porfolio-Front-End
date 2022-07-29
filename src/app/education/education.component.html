@@ -6,10 +6,10 @@
             <div class="table-responsive">
                 <table class="table table-striped">
                     <tbody>
-                        <br>
-                        <br>
+                    <br>
+                    <br>
                         <tr *ngFor="let Educacion of educ">
-                            <td class="subheading mb">{{Educacion.nombreEd}}</td>
+                            <td class="subheading mb-5">{{Educacion.nombreEd}}</td>
                             <td >{{Educacion.descripcionEd}}</td>
                             <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editedu/{{Educacion.id}}" > 
                                 <i class="bi bi-pencil-fill"></i> Editar</button></td>
@@ -24,8 +24,7 @@
                             <br>
                             <br> 
                         </div>
-              </table> 
-
+                </table> 
             </div>
         </div>
     </section>

@@ -2,31 +2,30 @@
         <!-- Experience-->
     <section class="resume-section" id="experience">
         <div class="resume-section-content">
-              <h2 class="mb-5">Experiencia</h2>
-                <div class="table-responsive">
-                    <table class="table table-striped" >
-                        <tbody>
+                <h2 class="mb-5">Experiencia</h2>
+            <div class="table-responsive">
+                <table class="table table-striped" >
+                    <tbody>
+                    <br>
+                    <br>
+                        <tr *ngFor="let Experiencia of expe">
+                            <td class="subheading mb-5">{{Experiencia.nombreE}}</td>
+                            <td >{{Experiencia.descripcionE}}</td>
+                            <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editexp/{{Experiencia.id}}" > 
+                                <i class="bi bi-pencil-fill"></i> Editar</button></td>
+                            <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)" >
+                                <i class="bi bi-trash-fill"></i>borrar</button></td>
+                        </tr>
+                    </tbody>
+                        <div >  
                             <br>
-                            <br>
-                                <tr *ngFor="let Experiencia of expe">
-                                    
-                                    <td class="subheading mb-5">{{Experiencia.nombreE}}</td>
-                                    <td >{{Experiencia.descripcionE}}</td>
-                                    <td *ngIf="isLogged"><button class="btn btn-warning" routerLink="/editexp/{{Experiencia.id}}" > 
-                                        <i class="bi bi-pencil-fill"></i> Editar</button></td>
-                                    <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)" >
-                                        <i class="bi bi-trash-fill"></i>borrar</button></td>
-                                </tr>
-                        </tbody>
-                            <div >  
-                                <br>
-                                <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
+                            <br>                       <!--nuevaexp declarado en experience.component con dicha logica-->
                                 <button class="btn btn-primary" type="button" routerLink="/nuevaexp/" *ngIf="isLogged" > Nueva Experiencia</button>
-                                <br>
-                                <br>
-                            </div>
-                    </table> 
-                </div> 
+                            <br>
+                            <br>
+                        </div>
+                </table> 
+            </div> 
         </div>                   
     </section> 
 </div>
@@ -52,5 +51,5 @@
                     <div class="subheading mb-2">Casa Blanca-DCR brokers-Werner</div>
                     <p>Ventas en diferentes empresas de venta de bienes raices, proyectos propios</p>
                 </div>
-                <div class="flex-shrink-0"><span class="text-primary">Febrero 2016 - Noviembre 2019</span></div>
+            <div class="flex-shrink-0"><span class="text-primary">Febrero 2016 - Noviembre 2019</span></div>
  -->

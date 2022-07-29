@@ -22,7 +22,4 @@ export class SAcercaService {
   public update(id: number, acerca:Acerca): Observable<any>{
     return this.httpClient.put<any>(this.expURL + `update/${id}`, acerca);
   }
-  public delete(id: number):Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
-  }
 }

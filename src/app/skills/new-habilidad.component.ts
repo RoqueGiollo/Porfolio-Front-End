@@ -21,12 +21,9 @@ export class NewHabilidadComponent implements OnInit {
     this.sHabilidad.save(habi).subscribe(data=>{
       window.alert("Habilidad anadida");
       this.router.navigate(['skills'])
-      //window.location.reload();
-
     }, err =>{
       window.alert("Fallo");
       this.router.navigate(['skills'])
-     //window.location.replace('/#experience') 
     })
   }
 }

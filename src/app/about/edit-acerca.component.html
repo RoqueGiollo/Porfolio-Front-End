@@ -1,22 +1,18 @@
 <div class="container-fluid p-0" >
-    <hr class="m-0" />
     <section class="resume-section">   
         <div class="resume-section-content">
             <div class="d-flex flex-column flex-bg-row justify-content-between mb-3">
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <br>
                 <br>
-                <div class="form-group" >
-                    <label for="nombreA">Ingrese About</label>
-                    <input type="text" class="form-control"  id="nombreA" name="nombreA" [(ngModel)]="acer.nombreA " required> 
-                </div>
-                <br>
-                <button class = "btn btn-primary">
-                    Actualizar About
-                </button>
-            </form>
+                    <div class="form-group" >
+                        <label for="nombreA"><h3>Ingrese About</h3></label>
+                        <input type="text" class="form-control"  id="nombreA" name="nombreA" [(ngModel)]="acer.nombreA " required> 
+                    </div>
+                    <br>
+                        <button class = "btn btn-primary">Actualizar About</button>
+                </form>
             </div>
         </div>
     </section>    
-    <hr class="m-0" />
 </div>
