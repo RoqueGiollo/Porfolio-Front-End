@@ -7,7 +7,7 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root'
 })
 export class SHabilidadService {
-  expURL = 'http://localhost:8080/habil/'
+  expURL = 'https://backend-portfolio3.herokuapp.com/habil/'
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Habilidad []>{

@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "./dist/html-to-angular67",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

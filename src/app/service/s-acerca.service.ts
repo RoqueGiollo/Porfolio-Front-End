@@ -7,7 +7,7 @@ import { Acerca } from '../model/acerca'
   providedIn: 'root'
 })
 export class SAcercaService {
-  expURL = 'http://localhost:8080/acerc/'
+  expURL = 'https://backend-portfolio3.herokuapp.com/acerc/'
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Acerca []>{

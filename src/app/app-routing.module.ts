@@ -17,6 +17,7 @@ import { EditHabilidadComponent } from './skills/edit-habilidad.component';
 
 const routes: Routes = [
   {path: '', component: AboutComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: 'nuevaexp', component:NewExperienciaComponent}, //ruterlink para CREAR desde experience component principal
   {path: 'editexp/:id', component:EditExperienciaComponent}, //ruterlink para EDITAR desde component principal-importante el /:id para poder editar dependiendo el id
