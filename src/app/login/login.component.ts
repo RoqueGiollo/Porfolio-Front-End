@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         //this.router.navigate(['about'])
-        window.alert("session iniciada")
+        window.alert("Sesion iniciada")
         window.location.replace('');
         
 
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
         this.isLogginFail=true;
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
-        window.alert("errror, mirar consola")
+        window.alert("Error, mirar consola")
       })
   }
 

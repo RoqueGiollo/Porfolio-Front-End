@@ -31,7 +31,7 @@ export class EducationComponent implements OnInit {
       this.sEducacion.delete(id).subscribe(
         data => {
           this.cargarEducacion();
-          window.alert("educacion borrada");
+          window.alert("Educacion borrada");
         },err =>{
           window.alert("Error al borrar");
         }
